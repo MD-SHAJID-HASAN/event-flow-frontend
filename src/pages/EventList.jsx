@@ -166,7 +166,7 @@ function EventList() {
               {event.imageUrl && (
                 <Card.Img
                   variant="top"
-                  src={`http://localhost:5000${event.imageUrl}`}
+                  src={`https://eventflowbackend-1.onrender.com${event.imageUrl}`}
                   style={{ height: "200px", objectFit: "cover" }}
                 />
               )}

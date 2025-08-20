@@ -24,7 +24,7 @@ const Home = () => {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/events");
+        const res = await fetch("https://eventflowbackend-1.onrender.com/api/events");
         const data = await res.json();
         setEvents(data.slice(0, 6)); // limit for homepage
       } catch (error) {
@@ -72,7 +72,7 @@ const Home = () => {
                 <Card className="h-100 shadow-sm border-0">
                   <Card.Img
                     variant="top"
-                    src={`http://localhost:5000${event.imageUrl}`}
+                    src={`https://eventflowbackend-1.onrender.com${event.imageUrl}`}
                     alt={event.title}
                     style={{ height: "200px", objectFit: "cover" }}
                   />

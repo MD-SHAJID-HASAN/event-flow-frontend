@@ -10,7 +10,7 @@ function EventDetails() {
   useEffect(() => {
     const fetchEvent = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/events/${id}`);
+        const res = await axios.get(`https://eventflowbackend-1.onrender.com/api/events/${id}`);
         setEvent(res.data);
       } catch (error) {
         console.error("Error fetching event:", error);
@@ -26,7 +26,7 @@ function EventDetails() {
       <Card className="mx-auto shadow-sm" style={{ maxWidth: "600px" }}>
         <Card.Img
           variant="top"
-          src={`http://localhost:5000${event.imageUrl}`}
+          src={`https://eventflowbackend-1.onrender.com${event.imageUrl}`}
           style={{ height: "300px", objectFit: "cover" }}
         />
         <Card.Body>
