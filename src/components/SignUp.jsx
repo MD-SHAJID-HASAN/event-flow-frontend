@@ -25,7 +25,7 @@ function SignUp() {
     e.preventDefault();
     console.log(formData);
     try {
-      await axios.post('http://localhost:5000/api/signup', formData);
+      await axios.post('https://eventflowbackend-1.onrender.com/api/signup', formData);
       alert("User registered successfully!");
       setFormData({ name: "", email: "", password: "" });
       navigate('/login')
